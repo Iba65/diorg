@@ -1,0 +1,127 @@
+fieldset.custom,
+fieldset.headCustom {
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.formh {
+  box-sizing: border-box;
+  border: solid 2px white;
+  border-radius: 20px;
+  margin: 5px;
+  width: 700px;
+  max-width: 700px;
+  color: darkblue;
+  z-index: 1;
+}
+.formh h2 {
+  text-align: center;
+  margin: 0;
+}
+.formh label {
+  font-size: large;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.formh input {
+  border: none;
+  background-color: inherit;
+  border-bottom: solid 2px navy;
+  font-size: 16px;
+  text-align: right;
+  padding-right: 5px;
+}
+.formh input:focus,
+input:focus-visible,
+input:focus-within {
+  outline: none;
+  border: 0;
+  border-bottom: solid 2px navy;
+}
+.borrarEntrada {
+  border: solid 1px navy;
+  border-radius: 15px;
+  padding: 1px;
+  margin-bottom: 5px;
+  width: 15px;
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+  left: 2px;
+}
+.borenHidden {
+  visibility: hidden;
+}
+
+.myoption {
+  margin: 10px;
+  padding: 10px;
+}
+
+.headform {
+  border: solid 1px rgb(1, 1, 53);
+  background-color: rgb(187, 208, 249);
+  border-radius: 10px;
+  padding-top: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+label.headLabel {
+  min-width: 100px;
+}
+
+.doubleForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.relContainer {
+  position: absolute;
+  top: 280px;
+  left: 20%;
+}
+
+.saved {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  padding: 0px 30px;
+}
+
+.listformh {
+  box-sizing: border-box;
+  border: solid 2px white;
+  border-radius: 20px;
+  margin: 5px;
+  width: 700px;
+  max-width: 700px;
+  color: darkblue;
+}
+
+.directContainer {
+  position: relative;
+  top: -310px;
+  left: 5px;
+  background-color: rgb(252, 250, 247);
+  box-sizing: border-box;
+  width: 70%;
+  margin-left: 180px;
+  padding: 5px;
+  border: solid 1px white;
+  border-radius: 10px;
+  z-index: 5;
+}
+.direlem:hover {
+  background-color: rgb(187, 208, 249);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}

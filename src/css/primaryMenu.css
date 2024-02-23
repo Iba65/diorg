@@ -1,0 +1,39 @@
+.primaryMenuContainer {
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 10px;
+  width: 100%;
+}
+
+ul.upmenu {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+ul.upmenu li {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: rgb(31, 105, 244);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+ul.upmenu li p {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 4px;
+}
+
+.icomenu {
+  width: 30px;
+  padding-right: 10px;
+}
