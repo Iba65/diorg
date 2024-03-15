@@ -132,11 +132,35 @@ export const tlfValid = (e, setTlfnHer) => {
   }
 };
 
+export const numValid = (e, callback) => {
+  if (/[0-9+]$/.test(e.target.value) || e.target.value === "") {
+    callback(e.target.value);
+  }
+};
+
 export const isAddress = (dir, GeneralState) => {
-  console.log(GeneralState.addreses.find((add) => add === dir));
   if (undefined !== GeneralState.addreses.find((add) => add === dir)) {
     return true;
   } else {
     return false;
   }
+};
+
+export const setOption = (ScreenDispatch, opc) => {
+  ScreenDispatch({
+    type: "CLOSE_ALL_OPTIONS",
+    payload: opc === "0",
+  });
+  ScreenDispatch({
+    type: "OPEN_FORM_BROTHERS",
+    payload: opc === "1",
+  });
+  ScreenDispatch({
+    type: "OPEN_FORM_RELATIONS",
+    payload: opc === "2",
+  });
+  ScreenDispatch({
+    type: "OPEN_FORM_GROUPS",
+    payload: opc === "3",
+  });
 };

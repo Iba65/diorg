@@ -50,7 +50,6 @@ export const RelationShipForm = ({
 
   useEffect(() => {
     if (Object.keys(selRelat).length > 0) {
-      console.log("selRelat:", selRelat);
       const resp = isRelationId(selRelat.idr);
       if (Object.keys(resp).length > 0) {
         setNombRel(resp.tipo);

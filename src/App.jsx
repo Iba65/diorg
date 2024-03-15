@@ -4,15 +4,18 @@ import { GeneralLayout } from "./components/layout/GeneralLayout";
 import { LateralMenu } from "./pages/LateralMenu";
 import { Configurations } from "./pages/Configurations";
 import { Home } from "./pages/Home";
+import { ScreenProvider } from "./common/context/screen/ScreenContext";
 
 function App() {
   const [opc, setOpc] = useState(0);
   return (
     <GeneralProvider>
-      <GeneralLayout>
-        <LateralMenu setOpc={setOpc} />
-        {opc === 0 ? <Home /> : <Configurations />}
-      </GeneralLayout>
+      <ScreenProvider>
+        <GeneralLayout>
+          <LateralMenu setOpc={setOpc} />
+          {opc === 0 ? <Home /> : <Configurations />}
+        </GeneralLayout>
+      </ScreenProvider>
     </GeneralProvider>
   );
 }

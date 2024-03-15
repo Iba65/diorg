@@ -42,8 +42,8 @@ ul.lateral li h3 {
   z-index: 2;
 }
 .lateralMenu {
-  width: 5%;
-  min-width: 100px;
+  box-sizing: border-box;
+  width: 7%;
   background-color: cornflowerblue;
   border-right: solid 0.5px white;
   height: 100vh;
@@ -73,12 +73,14 @@ ul.lateral li h3 {
 }
 
 .bodyApp {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: rgb(220, 231, 251);
+  background-color: rgb(213, 227, 254);
   height: 100vh;
-  width: 95%;
+  max-width: 95%;
+  width: 93%;
   z-index: 0;
 }

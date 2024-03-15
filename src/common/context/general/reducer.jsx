@@ -1,13 +1,12 @@
 export default function reducer(state, action) {
   switch (action.type) {
     case "INITAL_LOADING":
-      return { state: action.payload };
+      return action.payload;
     case "ADD_ADDRESS":
       return { ...state, addreses: [...state.addreses, action.payload] };
     case "ADD_BROTHER":
       return { ...state, brothers: [...state.brothers, action.payload] };
     case "PLUS_COUNTER_BRO":
-      console.log(action.payload);
       return {
         ...state,
         counterIds: { ...state.counterIds, brothers: action.payload },
@@ -17,11 +16,18 @@ export default function reducer(state, action) {
         ...state,
         counterIds: {
           ...state.counterIds,
-          relations: state.relations + 1,
+          relations: state.counterIds.relations + 1,
+        },
+      };
+    case "PLUS_COUNTER_GRU":
+      return {
+        ...state,
+        counterIds: {
+          ...state.counterIds,
+          groups: state.counterIds.relations + 1,
         },
       };
     case "CREATE_RELATION":
-      console.log("CREATE_RELATION -->", action.payload);
       return {
         ...state,
         relations: [...state.relations, action.payload],
@@ -88,6 +94,38 @@ export default function reducer(state, action) {
         ...state,
         errors: action.payload,
       };
+    case "PUT_TEMP_RELATIONS":
+      return {
+        ...state,
+        temp: {
+          ...state.temp,
+          relations: action.payload.data,
+          relnew: action.payload.new,
+        },
+      };
+    case "UPDATE_FOTOS":
+      const newfotos = state.fotos.map((fot) => {
+        if (fot.id === action.payload.id) {
+          return {
+            id: fot.id,
+            idBro: action.payload.idBro,
+            nameImg: fot.nameImg,
+          };
+        } else {
+          return fot;
+        }
+      });
+      return {
+        ...state,
+        fotos: newfotos,
+      };
+    case "ADD_GROUP":
+      console.log(action);
+      return {
+        ...state,
+        groups: [...state.groups, action.payload],
+      };
+
     default:
       return state;
   }

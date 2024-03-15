@@ -4,17 +4,18 @@ fieldset.headCustom {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-content: center;
   align-items: center;
 }
 .formh {
   box-sizing: border-box;
   border: solid 2px white;
   border-radius: 20px;
-  margin: 5px;
+  margin: 5px auto;
   width: 700px;
   max-width: 700px;
   color: darkblue;
-  z-index: 1;
+  z-index: 2;
 }
 .formh h2 {
   text-align: center;
@@ -85,6 +86,7 @@ label.headLabel {
   position: absolute;
   top: 280px;
   left: 20%;
+  z-index: 5;
 }
 
 .saved {
@@ -108,12 +110,12 @@ label.headLabel {
 }
 
 .directContainer {
-  position: relative;
-  top: -310px;
-  left: 5px;
+  position: absolute;
+  top: 80px;
+  left: 15px;
   background-color: rgb(252, 250, 247);
   box-sizing: border-box;
-  width: 70%;
+  width: 470px;
   margin-left: 180px;
   padding: 5px;
   border: solid 1px white;
@@ -124,4 +126,10 @@ label.headLabel {
   background-color: rgb(187, 208, 249);
   color: rgb(255, 255, 255);
   cursor: pointer;
+}
+.fotoContainer {
+  position: absolute;
+  top: 80px;
+  left: 1200px;
+  width: 101px;
 }

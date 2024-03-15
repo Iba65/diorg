@@ -6,21 +6,37 @@ export const initGeneralState = {
   },
   relations: [],
   brothers: [],
-  groups: [
+  groups: [],
+  addreses: [],
+  fotos: [
     {
-      idGrup: 0,
-      nomGrup: "",
-      memGrup: [
-        {
-          idBro: 0,
-          nomBro: "",
-          tipo: "",
-        },
-      ],
+      id: 1,
+      idBro: 0,
+      nameImg: "NsNc.png",
+    },
+    {
+      id: 2,
+      idBro: 0,
+      nameImg: "hnaImg.png",
+    },
+    {
+      id: 3,
+      idBro: 0,
+      nameImg: "hnoImg.png",
     },
   ],
-  addreses: [],
+  temp: {
+    relations: {},
+    relnew: false,
+  },
   errors: {},
+};
+export const initScreenState = {
+  sectionActive: "",
+  screenDataActive: true,
+  screenBroActive: false,
+  screenRelActive: false,
+  screenGruActive: false,
 };
 
 export const privileg = [
@@ -35,10 +51,6 @@ export const privileg = [
   {
     id: 3,
     priv: "Anciano",
-  },
-  {
-    id: 4,
-    priv: "Precursor",
   },
 ];
 

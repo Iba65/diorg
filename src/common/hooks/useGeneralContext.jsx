@@ -46,15 +46,53 @@ export const useGeneralContext = () => {
   };
 
   const updateContextBro = (data) => {
+    //*
+    //* grabacion en fichero relations
+    //* -------------------------------------
+    if (Object.keys(GeneralState.temp.relations).length > 0) {
+      const payloadRel = GeneralState.temp.relations;
+      if (GeneralState.temp.relnew) {
+        GeneralDispatch({
+          type: "CREATE_RELATION",
+          payload: payloadRel,
+        });
+        GeneralDispatch({
+          type: "PLUS_COUNTER_REL",
+          payload: "",
+        });
+      } else {
+        GeneralDispatch({
+          type: "ADD_MEMBER",
+          payload: payloadRel,
+        });
+      }
+      GeneralDispatch({
+        type: "PUT_TEMP_RELATIONS",
+        payload: { data: {}, new: false },
+      });
+    }
+
+    //* actualiza fotos
+    //* ----------------------
+    GeneralDispatch({
+      type: "UPDATE_FOTOS",
+      payload: { id: data.fotoId, idBro: data.idHer },
+    });
+
+    //*
+    //* --> grabación en fichero Hermanos
+    //* ------------------------------------------
     const payload = {
       id: data.idHer,
       nameBro: data.nombHer,
+      fotoId: parseInt(data.fotoId) + 1,
       dirBro: data.dirHer,
       tlfBro: data.tlfnHer,
       priviBro: data.privi,
       isRepaux: data.auxiliar,
+      isRepreg: data.regular,
       idRelation: data.idRel,
-      ifGroup: data.idGrupo,
+      idGroup: data.idGrupo,
     };
     //console.log("------>", payload);
 
@@ -88,14 +126,9 @@ export const useGeneralContext = () => {
           },
         ],
       };
-      console.log(payload);
       GeneralDispatch({
-        type: "CREATE_RELATION",
-        payload: payload,
-      });
-      GeneralDispatch({
-        type: "PLUS_COUNTER_REL",
-        payload: "",
+        type: "PUT_TEMP_RELATIONS",
+        payload: { data: payload, new: true },
       });
     } else {
       payload = {
@@ -105,8 +138,8 @@ export const useGeneralContext = () => {
         pos: data.tipRel,
       };
       GeneralDispatch({
-        type: "ADD_MEMBER",
-        payload: payload,
+        type: "PUT_TEMP_RELATIONS",
+        payload: { data: payload, new: false },
       });
     }
   };

@@ -1,0 +1,148 @@
+.headerImg {
+  border-radius: 17px 17px 0px 0px;
+  background-image: url("./../assets/imgs/Header10.jpg");
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 100px;
+  color: white;
+}
+.closeModal {
+  margin-top: 7px;
+  margin-right: 10px;
+  background-color: rgb(231, 231, 253);
+  position: absolute;
+  border-radius: 10px;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+.closeModal img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.fieldsIdGru {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fieldid {
+  margin-left: 20px;
+  max-width: 60px;
+  height: 20px;
+  background-color: rgb(187, 208, 249);
+  min-width: 130px;
+  color: rgb(1, 1, 53);
+  border-radius: 20px;
+}
+.fieldnomid {
+  margin-left: 20px;
+  max-width: 400px;
+  height: 20px;
+  background-color: rgb(187, 208, 249);
+  min-width: 400px;
+  color: rgb(1, 1, 53);
+  border-radius: 20px;
+}
+.fieldNomId {
+  max-width: 260px;
+  font-weight: 700;
+}
+
+.form-title {
+  color: white;
+  padding: 10px;
+}
+.form-title span {
+  padding: 2px 20px 4px 20px;
+  background-color: rgba(1, 1, 53, 0.404);
+  border-radius: 20px;
+}
+
+.sg1 {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 10px 15px;
+  width: 100%;
+  background-color: rgb(5, 5, 105);
+  border-bottom: solid 2px rgb(5, 5, 41);
+  border-right: solid 2px rgb(5, 5, 41);
+  border-top: solid 2px rgb(243, 243, 251);
+  border-left: solid 2px rgb(243, 243, 251);
+  color: white;
+}
+.sg1 input {
+  background-color: rgb(231, 231, 253);
+}
+.sg2 {
+  box-sizing: border-box;
+  margin: 0px;
+  padding-bottom: 4px;
+  padding-left: 160px;
+  width: 100%;
+  background-color: rgb(91, 91, 160);
+  border-bottom: solid 2px rgb(5, 5, 41);
+  border-right: solid 2px rgb(5, 5, 41);
+  border-top: solid 2px rgb(243, 243, 251);
+  border-left: solid 2px rgb(243, 243, 251);
+  color: white;
+}
+.sg2 input {
+  background-color: rgb(231, 231, 253);
+}
+
+.asisgrupData {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-height: 330px;
+  background-color: white;
+  width: 100%;
+  border-radius: 10px;
+}
+.fg1 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 2px;
+  width: 100%;
+  border-bottom: 2px solid white;
+  background-color: rgb(187, 208, 249);
+}
+.asisgrupDataList {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 15px;
+  overflow: auto;
+  border-bottom: 2px solid white;
+  background-color: rgb(213, 227, 254);
+}
+.fg2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.listselines {
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#formh {
+  position: relative;
+  background-color: white;
+  z-index: 4;
+}

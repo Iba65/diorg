@@ -9,7 +9,10 @@ export const LateralMenu = ({ setOpc }) => {
   const { getStorageValues } = useLocalStorage();
 
   useEffect(() => {
-    GeneralDispatch(getStorageValues("generalState", initGeneralState));
+    GeneralDispatch({
+      type: "INITAL_LOADING",
+      payload: getStorageValues("generalState", initGeneralState),
+    });
   }, []);
 
   return (
